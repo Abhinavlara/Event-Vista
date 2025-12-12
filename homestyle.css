@@ -1,0 +1,330 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #e120f7af ;
+            border-radius: 0 0 05px 05px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(0.2px); 
+            border-bottom: 1px solid rgba(15, 80, 171, 0.1);  
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            width:auto;
+            height:auto;
+            border-radius:2px;
+            display: flex;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: #667eea;
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            background:#f8f3EC;
+            color: #667eea;
+            padding: 1.10rem 1.7rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .event-card {
+            background: #f8f4EC;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .event-img {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .wedding { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ; }
+        .birthday { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)); }
+        .corporate { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)); }
+        
+        .event-content {
+            padding: 1.5rem;
+        }
+        
+        .event-content h3 {
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+        
+        .features {
+            background: #ffffff;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #43334C;
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background: #ffffff;
+            max-width: 600px;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .planner-list {
+            margin-top: 1rem;
+        }
+        
+        .planner {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .planner-info h4 {
+            color: #667eea;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        footer {
+            background: #333;
+            color: rgb(209, 192, 192);
+            text-align: center;
+            padding: 2rem;
+        }
+    
+        /* =========================================
+   RESPONSIVE MEDIA QUERIES
+   Add this to the bottom of your CSS file
+   ========================================= */
+
+/* Tablet and Smaller Laptops (Max Width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 3rem 1.5rem; /* Reduce side padding slightly */
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem; /* Scale down hero title */
+    }
+}
+
+/* Tablets and Large Phones (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Stack Navigation */
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; /* Allows links to wrap if they overflow */
+    }
+
+    /* Adjust Hero Section */
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Grids: Force 2 columns max on tablet if getting squeezed */
+    .events-grid, .features-grid {
+        gap: 1.5rem;
+    }
+    
+    /* Adjust Modal width */
+    .modal-content {
+        margin: 10% auto;
+        width: 90%; /* Occupy 90% of screen width */
+        max-width: none;
+    }
+}
+
+/* Mobile Devices (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+    /* Navigation: Stack vertically for mobile */
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    /* Hero adjustments for small screens */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Force Grids to single column to avoid horizontal scroll */
+    /* Overrides the minmax(300px) which might be too wide for some phones */
+    .events-grid, .features-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width for easier tapping */
+        text-align: center;
+    }
+
+    .planner {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .event-img {
+        height: 180px; /* Slightly shorter images */
+    }
+}

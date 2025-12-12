@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home/page-EventVista </title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="WhatsApp Image 2025-12-07 at 3.11.39 PM.jpeg" width="40px" height="40px" alt="EventVista Logo">
+                        <span style="margin-left:1.0px;">EventVista</span>
+                    </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Find Your Perfect Event Planner</h1>
+        <p>Connect with top event organizers for weddings, birthdays, and  other special occasions</p>
+        <a href="" class="btn">Login </a>
+        <span><a href="" class="btn">Sign Up</a></span>
+    </section>
+
+    <section class="container" id="events">
+        <h2 class="section-title">Pick Your Prefered Event </h2>
+        <div class="events-grid">
+            <div class="event-card" onclick="showPlanners('Wedding')">
+                <div class="event-img wedding"><img src="WhatsApp Image 2025-12-07 at 3.11.39 PM.jpeg" width="100%" height="100%" alt="Birthday Party"></div>
+                <div class="event-content">
+                    <h3>Weddings</h3>
+                    <p>Make your special day unforgettable with our expert wedding planners and stunning venues.</p>
+                </div>
+            </div>
+            
+            <div class="event-card" onclick="showPlanners('Birthday')">
+                <div class="event-img birthday"><img src="WhatsApp Image 2025-12-07 at 3.11.39 PM.jpeg" width="100%" height="100%" alt="Birthday Party"></div>
+                <div class="event-content">
+                    <h3>Birthday Parties</h3>
+                    <p>Celebrate in style with customized birthday party planning and unique venue options.</p>
+                </div>
+            </div>
+            
+            <div class="event-card" onclick="showPlanners('Corporate')">
+                <div class="event-img corporate"><img src="WhatsApp Image 2025-12-07 at 3.11.39 PM.jpeg" width="100%" height="100%" alt="Birthday Party"></div>
+                <div class="event-content">
+                    <h3>Corporate Events</h3>
+                    <p>Professional planning for conferences, meetings, and corporate gatherings.</p>
+                </div>
+            </div>
+            
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose EventVista?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Verified Planners</h3>
+                    <p>All organizers are verified professionals with proven track records.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Compare prices and packages to find the perfect fit for your budget.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>Multiple Venues</h3>
+                    <p>Access to premium venues across the city for any occasion.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Top Rated</h3>
+                    <p>Read reviews and ratings from real customers before booking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="plannerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Event Planners</h2>
+            <div class="planner-list" id="plannerList"></div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2025 EventVista. All rights reserved.</p>
+        <p>Email :- <a href="mailto:eventvistaofficial@gmail.com">eventvistaofficial@gmail.com</a></p>
+        <p>Contact :- +91-7975661445  |  +91-7007257688  |  +91-8660752657  | +91-8147090896 </p><br>
+        <p align="center">Made With 🤍 In INDIA </p>
+    </footer>
+    <script src="Homescript.js"></script>
+</body>
+</html>
