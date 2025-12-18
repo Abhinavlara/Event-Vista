@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Support & Help Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: #0056d2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            width: 60%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .card-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #0056d2;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #222;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-form {
+            margin-top: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #0056d2;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .contact-form button {
+            background: #0056d2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #003c97;
+        }
+
+        .hidden {
+            display: none;
+        }
+            .faq-item { margin-bottom: 15px; }
+        .faq-question {
+            width: 100%;
+            background: #0056d2;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .faq-answer {
+            display: none;
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 0 0 8px 8px;
+            margin-top: -8px;
+        }
+
+        nav {
+            background: #003c97;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover { text-decoration: underline; }
+            .article-btn {
+            margin-top: 15px;
+            padding: 10px 16px;
+            background: #0056d2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .article-btn:hover {
+            background: #003c97;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <h1>Customer Support & Help Center</h1>
+    <p class="article-text hidden">We are here to assist you 24/7</p>
+</header>
+
+<div class="container">
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search help articles..." onkeyup="searchArticles()" />
+    </div>
+
+    <!-- FAQ Section -->
+<div class="container" style="margin-top:40px;">
+    <h2 style="color:#0056d2; margin-bottom:20px;">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">How do I reset my password?</button>
+        <div class="faq-answer"><p>You can reset your password by navigating to the Reset Password page from the Help Center menu.</p></div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Why is my payment failing?</button>
+        <div class="faq-answer"><p>Payment failures can occur due to bank restrictions or insufficient balance. Visit the Payment Issues page for full troubleshooting steps.</p></div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">How can I contact live support?</button>
+        <div class="faq-answer"><p>You can use the contact form above or use live chat available in the support dashboard.</p></div>
+    </div>
+</div>
+
+
+    <div class="card-grid" id="articleList">
+        <div class="card">
+            <h3>Reset Password</h3>
+            <p class="article-text hidden">If you have forgotten your password or are unable to log in, you can reset it easily using the "Forgot Password" option on the login page. You will receive an email or OTP on your registered phone to verify your identity. Follow the link or enter the OTP to create a new password. Make sure to choose a strong password to keep your account secure.</p>
+        
+            <button class="article-btn" onclick="toggleArticle(this)">Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>Payment Issues</h3>
+            <p class="article-text hidden">Payment may fail due to reasons such as insufficient balance, expired card, network issues, or bank restrictions. Ensure that your card or UPI is active, and your bank has not blocked online transactions. If the amount is deducted but not reflected, it will be refunded within 3–5 business days. Visit your transaction history page for more details.</p>
+        
+            <button class="article-btn" onclick="toggleArticle(this)">Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>Delete Account</h3>
+            <p class="article-text hidden">If you wish to permanently delete your account, navigate to Settings → Privacy → Delete Account. You will be required to verify your identity using an OTP or email link. Once confirmed, your account and all associated data will be permanently removed and cannot be recovered. Download your data before proceeding.</p>
+        
+            <button class="article-btn" onclick="toggleArticle(this)">Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>Change Phone Number</h3>
+            <p class="article-text hidden">You can update your phone number in your profile settings. After entering the new number, you will receive a verification OTP. Once verified, your new number will be attached to your account. All notifications, alerts, and security messages will be sent to this updated number.</p>
+        
+            <button class="article-btn" onclick="toggleArticle(this)">Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>Two-Step Verification</h3>
+            <p class="article-text hidden">Two-step verification adds an extra layer of security to your account by requiring both your password and a verification code during login. You can enable this feature from the Security Settings. Your verification code may be delivered through SMS, email, or an authenticator app depending on your preference.</p>
+        
+            <button class="article-btn" onclick="toggleArticle(this)">Read More</button>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Contact Support</h2>
+        <input type="text" id="name" placeholder="Enter your name" required />
+        <input type="number" id="phone" placeholder="Enter your phone number" required />
+        <input type="email" id="email" placeholder="Enter your email address" required />
+        <textarea id="message" rows="5" placeholder="Describe your issue" required></textarea>
+        
+        <button onclick="submitForm()">Submit</button>
+        <p id="successMsg" class="hidden" style="color: green; margin-top: 10px; font-weight: bold;">Your request has been submitted successfully!</p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2025 Customer Support Center. All rights reserved.
+</footer>
+
+<script>
+    function searchArticles() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(input) ? 'block' : 'none';
+        });
+    }
+        // FAQ Accordion
+    const faqs = document.querySelectorAll('.faq-question');
+    faqs.forEach(faq => {
+        faq.addEventListener('click', () => {
+            const answer = faq.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+    function toggleArticle(btn) {
+        const text = btn.previousElementSibling;
+        if (text.classList.contains('hidden')) {
+            text.classList.remove('hidden');
+            btn.innerText = 'Read Less';
+        } else {
+            text.classList.add('hidden');
+            btn.innerText = 'Read More';
+        }
+    }
+
+    function submitForm() {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name === '' || phone === '' || email === '' || message === '') {
+            alert('Please fill all fields.');
+            return;
+        }
+
+        document.getElementById('successMsg').classList.remove('hidden');
+
+        setTimeout(() => {
+            document.getElementById('successMsg').classList.add('hidden');
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
